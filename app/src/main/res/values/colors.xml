@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_200">#FF56A770</color>
+    <color name="green_500">#FF56A770</color>
+    <color name="green_700">#FF40804B</color>
+    <color name="colorSecondary">#FF56A770</color>
+    <color name="colorPrimary">#FF40804B</color>
+    <color name="black">#FF000000</color>
+    <color name="black25">#40000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="green61AB70">#FF61AB70</color>
+    <color name="green65">#A661AB70</color>
+    <color name="getStartedButtonColor">#2A7C3B</color>
+    <color name="backgroundColor1">#FFF3E9D2</color>
+    <color name="color808080">#FF808080</color>
+    <color name="colorC7C7C7">#FFC7C7C7</color>
+    <color name="color616161">#616161</color>
+</resources>
+
+<!--100% — FF
+    95% — F2
+    90% — E6
+    85% — D9
+    80% — CC
+    75% — BF
+    70% — B3
+    65% — A6
+    60% — 99
+    55% — 8C
+    50% — 80
+    45% — 73
+    40% — 66
+    35% — 59
+    30% — 4D
+    25% — 40
+    20% — 33
+    15% — 26
+    10% — 1A
+    5% — 0D
+    0% — 00-->

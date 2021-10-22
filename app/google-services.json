@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1070114496416",
+    "project_id": "travel-app-c1927",
+    "storage_bucket": "travel-app-c1927.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070114496416:android:50160d35e0ab92a077cec5",
+        "android_client_info": {
+          "package_name": "com.example.travelapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070114496416-gcm1ho982aboul8rgnesraqs30lhtq8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvI-w29MrE5uEl_mnsR5zvxq65cAqB2d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070114496416-gcm1ho982aboul8rgnesraqs30lhtq8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070114496416:android:f86d536672f1f63d77cec5",
+        "android_client_info": {
+          "package_name": "com.example.travellapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070114496416-hsj9p11r9hm1spbqb27por4b7409vnrs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.travellapp",
+            "certificate_hash": "b50a2a532699969e30200f5bb783d3a808d2f6a2"
+          }
+        },
+        {
+          "client_id": "1070114496416-gcm1ho982aboul8rgnesraqs30lhtq8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvI-w29MrE5uEl_mnsR5zvxq65cAqB2d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070114496416-gcm1ho982aboul8rgnesraqs30lhtq8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
