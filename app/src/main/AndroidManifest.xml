@@ -8,10 +8,28 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.TravelApp">
+        <activity
+            android:name=".activity.ActivityGallery"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActivityPackages"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActivityUpcomingEvents"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ActivityStories"
+            android:exported="true" />
         <activity
             android:name=".activity.ActivityVerifyOTP"
             android:exported="true" />
+        <activity
+            android:name=".activity.ActivityHome"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".activity.ActivityLogin"
             android:exported="true" />
@@ -24,7 +42,7 @@
             android:exported="true" />
         <activity
             android:name=".activity.ActivitySplash"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
