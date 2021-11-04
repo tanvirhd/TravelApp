@@ -43,9 +43,9 @@ public class ActivityCreateAccount extends AppCompatActivity {
                             }else {
                                 if(modelValidation.isNewUser()){
                                    sentOTP();
-                                   /*Intent intent=new Intent(ActivityCreateAccount.this,ActivityVerifyOTP.class);
+                                   Intent intent=new Intent(ActivityCreateAccount.this,ActivityVerifyOTP.class);
                                    intent.putExtra("phone-number",binding.etPhoneNumber.getText().toString());
-                                   startActivity(intent);*/
+                                   startActivity(intent);
                                 }else {
                                     Toast.makeText(ActivityCreateAccount.this, "Already Registered", Toast.LENGTH_SHORT).show();
                                 }
