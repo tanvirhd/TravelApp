@@ -25,7 +25,7 @@ public class ActivitySplash extends AppCompatActivity {
         binding.btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ActivitySplash.this,ActivityCreateAccount.class));
+                startActivity(new Intent(ActivitySplash.this,ActivityLogin.class));
             }
         });
     }

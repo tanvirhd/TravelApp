@@ -6,21 +6,19 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.travelapplication.R;
 import com.example.travelapplication.databinding.ActivityCreateAccountBinding;
 import com.example.travelapplication.model.ModelUser;
 import com.example.travelapplication.model.ModelValidation;
-import com.example.travelapplication.viewholder.ViewModelCheckUser;
+import com.example.travelapplication.viewholder.ViewModelTravelApp;
 
 public class ActivityCreateAccount extends AppCompatActivity {
 
     private static final String TAG = "ActivityCreateAccount";
     private ActivityCreateAccountBinding binding;
-    private ViewModelCheckUser viewModelCheckUser;
+    private ViewModelTravelApp viewModelTravelApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class ActivityCreateAccount extends AppCompatActivity {
                 if(binding.etPhoneNumber.getText().toString().length()!=11){
                     Toast.makeText(ActivityCreateAccount.this, "Invalid Phone Number!", Toast.LENGTH_SHORT).show();
                 }else{
-                    viewModelCheckUser.checkUserValidation(new ModelUser(binding.etPhoneNumber.getText().toString()))
+                    viewModelTravelApp.checkUserValidation(new ModelUser(binding.etPhoneNumber.getText().toString()))
                     .observe(ActivityCreateAccount.this, new Observer<ModelValidation>() {
                         @Override
                         public void onChanged(ModelValidation modelValidation) {
@@ -60,7 +58,7 @@ public class ActivityCreateAccount extends AppCompatActivity {
     }
 
     void init(){
-        viewModelCheckUser=new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(ViewModelCheckUser.class);
+        viewModelTravelApp =new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(ViewModelTravelApp.class);
     }
 
     void sentOTP(){

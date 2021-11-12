@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
     public static Retrofit retrofit;
-    private static final String baseURL="http://www.duarbd.com/";
+    private static final String baseURL="http://travellapp.duarbd.com/";
     public static ApiInterface apiInterface;
 
     public static synchronized ApiInterface getApiInterface(){
