@@ -40,7 +40,6 @@ public class ActivityCreateAccount extends AppCompatActivity {
                                 Toast.makeText(ActivityCreateAccount.this, "Something Went Wrong!", Toast.LENGTH_SHORT).show();
                             }else {
                                 if(modelValidation.isNewUser()){
-                                   sentOTP();
                                    Intent intent=new Intent(ActivityCreateAccount.this,ActivityVerifyOTP.class);
                                    intent.putExtra("phone-number",binding.etPhoneNumber.getText().toString());
                                    startActivity(intent);
@@ -51,7 +50,6 @@ public class ActivityCreateAccount extends AppCompatActivity {
                         }
                     });
 
-
                 }
             }
         });
@@ -61,7 +59,5 @@ public class ActivityCreateAccount extends AppCompatActivity {
         viewModelTravelApp =new ViewModelProvider.AndroidViewModelFactory(getApplication()).create(ViewModelTravelApp.class);
     }
 
-    void sentOTP(){
-        Toast.makeText(this, "New User", Toast.LENGTH_SHORT).show();
-    }
+
 }

@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.travelapplication.R;
 import com.example.travelapplication.databinding.ActivityVerifyOtpBinding;
@@ -59,6 +60,8 @@ public class ActivityVerifyOTP extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 Log.d(TAG, "onTextChanged: "+s.toString());
+                if(s.length()==6)
+                    verifyOTP( PhoneAuthProvider.getCredential(verificationId, s.toString()));
             }
 
             @Override
@@ -84,13 +87,13 @@ public class ActivityVerifyOTP extends AppCompatActivity {
 
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
-                Log.d(TAG, "onVerificationFailed: called");
+                Log.d(TAG, "onVerificationFailed: "+e.getMessage());
             }
 
             @Override
             public void onCodeSent(@NonNull String verificationId, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
                 storeVerificationIdAndToken(verificationId,forceResendingToken);
-                //super.onCodeSent(verificationId, forceResendingToken);
+                Log.d(TAG, "onCodeSent: called");
             }
         };
 
@@ -105,7 +108,7 @@ public class ActivityVerifyOTP extends AppCompatActivity {
     void sendVerificationCode(String phnNumber,FirebaseAuth auth,PhoneAuthProvider.OnVerificationStateChangedCallbacks callbacks){
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(auth)
-                        .setPhoneNumber(phnNumber)       // Phone number to verify
+                        .setPhoneNumber("+88"+phnNumber)       // Phone number to verify
                         .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
                         .setActivity(this)                 // Activity (for callback binding)
                         .setCallbacks(callbacks)          // OnVerificationStateChangedCallbacks
@@ -113,22 +116,22 @@ public class ActivityVerifyOTP extends AppCompatActivity {
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
 
-    private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
+    private void verifyOTP(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d(TAG, "signInWithCredential:success");
+                            Log.d(TAG, "otp verification done.goto complete account page");
 
-                            FirebaseUser user = task.getResult().getUser();
-                            // Update UI
+                            Intent intent=new Intent(ActivityVerifyOTP.this,ActivityCompleteAccount.class);
+                            intent.putExtra("phone-number",phoneNumber);
+                            startActivity(intent);
                         } else {
                             // Sign in failed, display a message and update the UI
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
-                                // The verification code entered was invalid
+                                Toast.makeText(ActivityVerifyOTP.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
