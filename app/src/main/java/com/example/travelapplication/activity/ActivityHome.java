@@ -46,6 +46,15 @@ public class ActivityHome extends AppCompatActivity implements AdapterHomeOption
 
     @Override
     public void onHomeOptionSelected(int position) {
-        Toast.makeText(ActivityHome.this, "Clicked", Toast.LENGTH_SHORT).show();
+        switch (position){
+            case 0:
+                break;
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
     }
 }
