@@ -6,8 +6,11 @@
     <color name="colorSecondary">#FF56A770</color>
     <color name="colorPrimary">#FF40804B</color>
     <color name="black">#FF000000</color>
+    <color name="black90P">#E6000000</color>
     <color name="black25">#40000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ColorF3E9D2">#FFF3E9D2</color>
+    <color name="Color1F3342">#FF1F3342</color>
 
     <color name="green61AB70">#FF61AB70</color>
     <color name="green65">#A661AB70</color>

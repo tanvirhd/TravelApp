@@ -1,9 +1,13 @@
 package com.example.travelapplication.network;
 
+import com.example.travelapplication.model.ModelImage;
+import com.example.travelapplication.model.ModelTourPackage;
 import com.example.travelapplication.model.response.ModelResponseLogin;
 import com.example.travelapplication.model.ModelUser;
 import com.example.travelapplication.model.ModelValidation;
 import com.example.travelapplication.model.response.ModelResponseRegistration;
+
+import java.util.List;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -19,4 +23,15 @@ public interface ApiInterface {
 
     @POST("registerNewUser.php")
     Observable<ModelResponseRegistration> registerUser(@Body ModelUser user);
+
+
+
+    //package related
+    @POST("getAllPublishedEvents.php")
+    Observable<List<ModelTourPackage>> getAllPublishedEvents();
+
+
+    //get images
+    @POST("getImages.php")
+    Observable<List<ModelImage>> getAllImages();
 }

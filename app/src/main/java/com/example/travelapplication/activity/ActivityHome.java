@@ -3,7 +3,9 @@ package com.example.travelapplication.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.travelapplication.R;
@@ -11,6 +13,8 @@ import com.example.travelapplication.adapter.AdapterHomeOption;
 import com.example.travelapplication.callbacks.AdapterHomeOptionCallbacks;
 import com.example.travelapplication.databinding.ActivityHomeBinding;
 import com.example.travelapplication.model.ModelHomeOption;
+import com.example.travelapplication.utils.GlobalKey;
+import com.example.travelapplication.utils.Tools;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,6 +39,14 @@ public class ActivityHome extends AppCompatActivity implements AdapterHomeOption
         setContentView(binding.getRoot());
 
         init();
+
+        binding.ivLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Tools.savePrefBoolean(GlobalKey.IS_LOGGED_IN,false);
+                startActivity(new Intent(ActivityHome.this,ActivityLogin.class));finish();
+            }
+        });
     }
 
     void init(){
@@ -50,10 +62,13 @@ public class ActivityHome extends AppCompatActivity implements AdapterHomeOption
             case 0:
                 break;
             case 1:
+                startActivity(new Intent(ActivityHome.this,ActivityUpcomingEvents.class));//finish();
                 break;
             case 2:
+                startActivity(new Intent(ActivityHome.this,ActivityPackages.class));//finish();
                 break;
             case 3:
+                startActivity(new Intent(ActivityHome.this,ActivityGallery.class));//finish();
                 break;
         }
     }

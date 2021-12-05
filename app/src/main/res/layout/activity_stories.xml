@@ -10,32 +10,23 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_home_gradient"
-        app:liftOnScroll="true">
+        android:layout_height="wrap_content">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:fitsSystemWindows="true"
-            app:contentScrim="@color/yellow2"
-            app:expandedTitleGravity="bottom"
-            style="@style/collapsingToolbarLayoutTitleColor"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:expandedTitleTextAppearance="@style/ExtendedAppBar"
-            app:collapsedTitleTextAppearance="@style/CollapsedAppBar">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 app:titleTextColor="@color/black"
-                android:background="@color/yellow2"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:layout_gravity="center_horizontal"
                 app:layout_collapseMode="pin"/>
 
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="টাঙ্গুয়ার হাওর সুনামগঞ্জের ধর্মপাশা ও তাহিরপুর উপজেলার মেঘালয় পাহাড়ের পাদদেশে অবস্থিত।মেঘালয় পাহাড় থেকে ৩০ টির ও বেশি ঝরা এসে মিশেছে এই হাওরে। তাহিরপুর উপজেলার উত্তর\r\nবড়বদল ইউনিয়নের একটি গ্রাম 'মানিকগাঁও' পাহাড়ি স্নিগ্ধ জলের শান্ত নদী জাদুকাটা এই গ্রামের \r\nপাশ দিয়েই বহমান।বর্ষায় অপূর্ব রূপ ধারণ করে হাওড়,সাথে পূর্ণিমা হলে তো কথাই নেই!এবার আমরা \r\nভ্রমণকন্যারা যাচ্ছি স্বপ্নের মত সুন্দর হাওরটিতে ভরা বর্ষায়!আমরা থাকব টাংগুয়ার হাওরের সবচেয়ে\r\n\r\nবিলাসবহুল নৌকা ময়ূরপঙ্খিতে।\r\n\r\nযা যা দেখব :\r\n#টাঙ্গুয়ার হাওর\r\n#টেকেরঘাট\r\n#জাদুকাটা নদী\r\n#বারিক্কাটিলা\r\n#শহীদ সিরাজ লেক লেক/নীলাদ্রি লেক"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

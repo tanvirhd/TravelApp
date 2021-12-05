@@ -17,6 +17,8 @@ import com.example.travelapplication.R;
 import com.example.travelapplication.databinding.ActivityLoginBinding;
 import com.example.travelapplication.model.ModelUser;
 import com.example.travelapplication.model.response.ModelResponseLogin;
+import com.example.travelapplication.utils.GlobalKey;
+import com.example.travelapplication.utils.Tools;
 import com.example.travelapplication.viewholder.ViewModelTravelApp;
 
 public class ActivityLogin extends AppCompatActivity  {
@@ -50,6 +52,9 @@ public class ActivityLogin extends AppCompatActivity  {
                     public void onChanged(ModelResponseLogin modelResponseLogin) {
                         if(modelResponseLogin != null && modelResponseLogin.getResponseCode() == 200){
                             dialogLoading.dismiss();
+
+                            Tools.savePrefBoolean(GlobalKey.IS_LOGGED_IN,true);
+                            Tools.savePref(GlobalKey.USER_ID,binding.etPhoneNumber.getText().toString());
                             startActivity(new Intent(ActivityLogin.this,ActivityHome.class));
                         }else{
                             dialogLoading.dismiss();
